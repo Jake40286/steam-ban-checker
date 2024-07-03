@@ -13,9 +13,10 @@ Cheater Checker is a Python script to monitor and detect bans on players from a 
 
 - Python 3.6+
 - Install dependencies using:
-  ```sh
+
+```sh
   pip install -r requirements.txt
-  ```
+```
 
 ## Usage
 ### Setup
