@@ -23,10 +23,10 @@ Cheater Checker is a Python script to monitor and detect bans on players from a 
 
     Clone the repository:
 
-    ```sh
+```sh
     git clone https://github.com/your_username/cheater-checker.git
     cd cheater-checker
-    ```
+ ```
 ### Install dependencies:
 
 ```sh
