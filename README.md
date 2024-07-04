@@ -70,16 +70,3 @@ Contributions are welcome! Please fork the repository and create a pull request 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-### Directory Structure
-
-Ensure that your directory structure reflects the new names:
-
-```
-steam-ban-checker/
-├── urls.json
-├── data.json
-├── steam_ban_checker.py
-└── requirements.txt
-```
