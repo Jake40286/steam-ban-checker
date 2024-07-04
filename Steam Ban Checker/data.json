@@ -5,7 +5,7 @@
     },
     "https://steamcommunity.com/id/Proyeckt": {
         "username": "z\u2020c Proy",
-        "days_since_last_ban": 56
+        "days_since_last_ban": 57
     },
     "https://steamcommunity.com/id/nSAYN": {
         "username": "[scumge] n S A Y N !",
@@ -57,7 +57,7 @@
     },
     "https://steamcommunity.com/id/ThunderOne": {
         "username": "ThunderOne",
-        "days_since_last_ban": 11
+        "days_since_last_ban": 12
     },
     "https://steamcommunity.com/profiles/76561199011887773": {
         "username": "[SWMG] \u0442\u0443\u043b\u0443\u0439",
@@ -69,6 +69,22 @@
     },
     "https://steamcommunity.com/id/sketchiex/": {
         "username": "[scumge] sketchie",
+        "days_since_last_ban": -1
+    },
+    "https://steamcommunity.com/id/NewAccountOneReport": {
+        "username": "[BB] Hidden Profile",
+        "days_since_last_ban": -1
+    },
+    "https://steamcommunity.com/profiles/76561199126019245": {
+        "username": "[BB] Sticky Rice",
+        "days_since_last_ban": -1
+    },
+    "https://steamcommunity.com/profiles/76561199380619546": {
+        "username": "[BB] Woke up Mad",
+        "days_since_last_ban": -1
+    },
+    "https://steamcommunity.com/profiles/76561199034626097": {
+        "username": "[SWMG]SmellyTaco",
         "days_since_last_ban": -1
     }
 }
