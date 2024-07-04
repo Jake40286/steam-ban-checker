@@ -14,31 +14,30 @@ Cheater Checker is a Python script to monitor and detect bans on players from a 
 - Python 3.6+
 - Install dependencies using:
 
-```sh
+  ```sh
   pip install -r requirements.txt
-```
+  ```
 
 ## Usage
 
 ### Setup
 
-#### Clone the repository:
+Clone the repository:
 
 ```sh
-    git clone https://github.com/your_username/cheater-checker.git
-    cd cheater-checker
+git clone https://github.com/your_username/cheater-checker.git
+cd cheater-checker
 ```
 
-#### Install dependencies:
+Install dependencies:
 
 ```sh
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
-#### Prepare URLs and configuration:
-
-Edit urls.json to include the URLs you want to monitor. (Not these examples provided are for example only, not confirmed cheaters and are included only because of hackusations.)
-Customize data.json for initial or previous ban data storage.
+Prepare URLs and configuration:
+- Edit `urls.json` to include the URLs you want to monitor.
+- Customize `data.json` for initial or previous ban data storage.
 
 ### Running the Script
 
@@ -50,23 +49,24 @@ python cheater_checker.py
 
 ## Options
 
-Debug Mode: Use -d or --debug to run with detailed debug output:
+- **Debug Mode**: Use `-d` or `--debug` to run with detailed debug output:
 
-```sh
-python cheater_checker.py --debug
-```
+  ```sh
+  python cheater_checker.py --debug
+  ```
 
 ## Example
 
 Here's an example of how to use the script:
 
-Prepare urls.json with URLs to monitor.
-Run cheater_checker.py to scan and check for new bans.
-View output in the console and monitor data.json for updated ban information.
+1. Prepare `urls.json` with URLs to monitor.
+2. Run `cheater_checker.py` to scan and check for new bans.
+3. View output in the console and monitor `data.json` for updated ban information.
 
 ## Contributing
 
 Contributions are welcome! Please fork the repository and create a pull request with your improvements.
-License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
