@@ -82,3 +82,4 @@ steam-ban-checker/
 ├── data.json
 ├── steam_ban_checker.py
 └── requirements.txt
+```
