@@ -22,22 +22,23 @@ Cheater Checker is a Python script to monitor and detect bans on players from a 
 
 ### Setup
 
-    Clone the repository:
+#### Clone the repository:
 
 ```sh
     git clone https://github.com/your_username/cheater-checker.git
     cd cheater-checker
 ```
 
-### Install dependencies:
+#### Install dependencies:
 
 ```sh
     pip install -r requirements.txt
 ```
 
-    Prepare URLs and configuration:
-        Edit urls.json to include the URLs you want to monitor. (Not these examples provided are for example only, not confirmed cheaters and are included only because of hackusations.)
-        Customize data.json for initial or previous ban data storage.
+#### Prepare URLs and configuration:
+
+Edit urls.json to include the URLs you want to monitor. (Not these examples provided are for example only, not confirmed cheaters and are included only because of hackusations.)
+Customize data.json for initial or previous ban data storage.
 
 ### Running the Script
 
@@ -59,9 +60,9 @@ python cheater_checker.py --debug
 
 Here's an example of how to use the script:
 
-    Prepare urls.json with URLs to monitor.
-    Run cheater_checker.py to scan and check for new bans.
-    View output in the console and monitor data.json for updated ban information.
+Prepare urls.json with URLs to monitor.
+Run cheater_checker.py to scan and check for new bans.
+View output in the console and monitor data.json for updated ban information.
 
 ## Contributing
 
