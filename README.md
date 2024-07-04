@@ -36,8 +36,8 @@ pip install -r requirements.txt
 ```
 
 Prepare URLs and configuration:
-- Edit `urls.json` to include the URLs you want to monitor.
-- Customize `data.json` for initial or previous ban data storage.
+- Copy `example.json` and rename to `urls.json`.
+- Edit the new `urls.json` to include the URLs you want to monitor.
 
 ### Running the Script
 
