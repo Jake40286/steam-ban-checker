@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ```
 
 Prepare URLs and configuration:
-- Copy `example.json` and rename to `urls.json`.
+- Copy `example.json` and rename it to `urls.json`.
 - Edit the new `urls.json` to include the URLs you want to monitor.
 
 ### Running the Script
@@ -70,3 +70,4 @@ Contributions are welcome! Please fork the repository and create a pull request 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
