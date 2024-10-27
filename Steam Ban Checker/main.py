@@ -34,6 +34,14 @@ def get_urls_from_json(file_path):
         data = json.load(file)
     return data['urls']
 
+def add_url_to_json(file_path, new_url):
+    with open(file_path, 'r+') as file:
+        data = json.load(file)
+        data['urls'].append(new_url)
+        file.seek(0)
+        json.dump(data, file, indent=4)
+        file.truncate()
+
 def load_previous_data(file_path):
     try:
         with open(file_path, 'r') as file:
@@ -46,13 +54,8 @@ def save_current_data(file_path, data):
     with open(file_path, 'w') as file:
         json.dump(data, file, indent=4)
 
-def check_new_bans(url_file, search_text, data_file, debug):
-    urls = get_urls_from_json(url_file)
+def check_new_bans(urls, search_text, data_file, debug):
     previous_data = load_previous_data(data_file)
-
-    if debug:
-        print("Scanning has begun...")
-
     new_bans_detected = False
 
     for url in urls:
@@ -77,7 +80,7 @@ def check_new_bans(url_file, search_text, data_file, debug):
                     print(f"{Fore.RED}[{stored_username}]: New ban detected: {days} day(s) since last ban (previously {prev_days} day(s)){Style.RESET_ALL}")
             else:
                 print(f"New data for {username} ({url}): {days if days is not None else 'No ban info'} day(s) since last ban")
-            
+
             previous_data[url] = {
                 'username': username,
                 'days_since_last_ban': days if days is not None else -1
@@ -93,16 +96,22 @@ def check_new_bans(url_file, search_text, data_file, debug):
     if not new_bans_detected:
         print("No new bans detected.")
 
-def main(url_file, search_text, data_file, debug_flag):
-    check_new_bans(url_file, search_text, data_file, debug_flag)
+def main(url_file, search_text, data_file, debug_flag, new_url):
+    if new_url:
+        add_url_to_json(url_file, new_url)
+        check_new_bans([new_url], search_text, data_file, debug_flag)
+    else:
+        urls = get_urls_from_json(url_file)
+        check_new_bans(urls, search_text, data_file, debug_flag)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Check for bans on Steam players from a list of URLs.")
     parser.add_argument('--debug', '-d', action='store_true', help="Run with detailed debug output")
+    parser.add_argument('--add-url', '-a', type=str, help="Add a new URL to urls.json and scan it immediately")
     args = parser.parse_args()
 
     url_file = r"Steam Ban Checker\urls.json"  # Path to your JSON file with URLs
     search_text = "day(s) since last ban"
     data_file = r"Steam Ban Checker\data.json"  # Path to your JSON file for storing previous data
 
-    main(url_file, search_text, data_file, args.debug)
+    main(url_file, search_text, data_file, args.debug, args.add_url)
